@@ -1,0 +1,15 @@
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\bin\Debug\net6.0\ProyectoEntornos.exe
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\bin\Debug\net6.0\ProyectoEntornos.deps.json
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\bin\Debug\net6.0\ProyectoEntornos.runtimeconfig.json
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\bin\Debug\net6.0\ProyectoEntornos.dll
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\bin\Debug\net6.0\ProyectoEntornos.pdb
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.csproj.AssemblyReference.cache
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.AssemblyInfoInputs.cache
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.AssemblyInfo.cs
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.csproj.CoreCompileInputs.cache
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.dll
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\refint\ProyectoEntornos.dll
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.pdb
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ProyectoEntornos.genruntimeconfig.cache
+C:\Users\ModuloPRO\source\repos\ProyectoEntornos\ProyectoEntornos\obj\Debug\net6.0\ref\ProyectoEntornos.dll
