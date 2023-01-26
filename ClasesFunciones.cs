@@ -23,6 +23,7 @@ namespace ProyectoEntornos
     {
         public static void EsPrimo(int num)
         {
+            Console.WriteLine("Esto es un test del github")
             //Calcular si el número es primo
         }
         public static void CalcFactorial(int num)
