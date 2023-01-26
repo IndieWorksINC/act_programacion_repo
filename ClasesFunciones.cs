@@ -40,6 +40,7 @@ namespace ProyectoEntornos
         public static void NumeroArmstrong(int num)
         {
             //Devolver si un número es un número de Armstrong o no
+            Console.WriteLine("Tusmuertos");
         }
         public static void DigitoDiferente(int num)
         {
