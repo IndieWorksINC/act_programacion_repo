@@ -7,7 +7,10 @@ namespace ProyectoEntornos
     
     class FuncionesUtiles
     {
+        //public static decimal EsDecimal(string valor)
+        //{
 
+        //}
     }
     
     //
@@ -23,7 +26,7 @@ namespace ProyectoEntornos
     {
         public static void EsPrimo(int num)
         {
-            Console.WriteLine("Esto es un test del github")
+            Console.WriteLine("Esto es un test del github");
             //Calcular si el número es primo
         }
         public static void CalcFactorial(int num)
@@ -92,6 +95,63 @@ namespace ProyectoEntornos
         public static void EcuacionSegundGrado(decimal num)
         {
             //Dados tres coeficientes ejecutar la ecuación de segundo grado
+            while (true)
+            {
+
+                double a = 0;
+                double b = 0;
+                double c = 0;
+
+                double x1 = 0;
+                double x2 = 0;
+
+
+                Console.WriteLine("Esta función requiere de que introduzca 3 nuevos valores para ejecutar la ecuación: ");
+                Console.WriteLine("Introduzca el valor A de la ecuación: ");
+
+                while(!Double.TryParse(Console.ReadLine(), out a))
+                {
+                    Console.WriteLine("Valor introducido no decimal. Vuelva a intentarlo: ");
+                }
+                Console.WriteLine("Introduzca el valor B de la ecuación: ");
+
+                while (!Double.TryParse(Console.ReadLine(), out b))
+                {
+                    Console.WriteLine("Valor introducido no decimal. Vuelva a intentarlo: ");
+                }
+                Console.WriteLine("Introduzca el valor C de la ecuación: ");
+
+                while (!Double.TryParse(Console.ReadLine(), out c))
+                {
+                    Console.WriteLine("Valor introducido no decimal. Vuelva a intentarlo: ");
+                }
+
+                Console.WriteLine($"La ecuación introducida es {a}x^2 + {b}x + {c}");
+
+                x1 = (-b + Math.Sqrt(Math.Pow(b, 2) - (4 * a * c))) / (2 * a);
+                x2 = (-b - Math.Sqrt(Math.Pow(b, 2) - (4 * a * c))) / (2 * a);
+                if(Double.IsNaN(x1) || Double.IsNaN(x2))
+                {
+                    Console.WriteLine("La ecuación tiene un valor imaginario que no existe dentro del conjunto de los números reales.");
+                }
+                if(x1 == x2)
+                {
+                    Console.WriteLine($"La ecuación solo tiene una solución real: x={x1}");
+                }
+                else
+                {
+                    Console.WriteLine($"El valor de x es {x1} y {x2}");
+
+                }
+            }
+                
+                
+            //if(a != 0 && b != 0 && c != 0)
+            //{
+
+            //}
+
+
         }
     }
     class FuncionesString
