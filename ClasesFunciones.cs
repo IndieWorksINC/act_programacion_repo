@@ -23,7 +23,7 @@ namespace ProyectoEntornos
     {
         public static void EsPrimo(int num)
         {
-            Console.WriteLine("Esto es un test del github")
+            Console.WriteLine("Esto es un test del github");
             //Calcular si el número es primo
         }
         public static void CalcFactorial(int num)
@@ -84,14 +84,68 @@ namespace ProyectoEntornos
         public static void Redondear(decimal num)
         {
             //Redondear el número al alza
+            num = Math.Round(num, MidpointRounding.AwayFromZero);
+            Console.WriteLine("El número redondeado al alza es: {0} ",num);
+            Console.WriteLine("Pulse una tecla para continuar...");
+            Console.ReadKey();
         }
         public static void Truncar(decimal num)
         {
             //Eliminar los decimales del número
+            num = Math.Truncate(num);
+            Console.WriteLine("El número truncado es: {0} ", num);
+            Console.WriteLine("Pulse una tecla para continuar...");
+            Console.ReadKey();
+
         }
         public static void EcuacionSegundGrado(decimal num)
         {
             //Dados tres coeficientes ejecutar la ecuación de segundo grado
+            double a;
+            double b;
+            double c;
+            Console.WriteLine("Introduce un numero para la variable a");
+            if (double.TryParse(Console.ReadLine(),out a))
+            {
+                Console.WriteLine("Introduce un numero para la variable b");
+                if (double.TryParse(Console.ReadLine(), out b))
+                {
+                    Console.WriteLine("Introduce un numero para la variable c");
+                    if (double.TryParse(Console.ReadLine(), out c))
+                    {
+                        double calculo = b * b - 4 * a * c;
+                        if (calculo > 0)
+                        {
+                            double resultado1 = (-b + Math.Sqrt(calculo)) / (2 * a);
+                            double resultado2 = (-b - Math.Sqrt(calculo)) / (2 * a);
+                            Console.WriteLine("Las raíces son: x1 = {0}, x2 = {1}", resultado1, resultado2);
+                        }
+                        else if (calculo == 0)
+                        {
+                            double x = -b / (2 * a);
+                            Console.WriteLine("La raíz es: x = {0}", x);
+                        }
+                        else
+                        {
+                            Console.WriteLine("La ecuación no tiene raíces reales.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("La el valor introducido en la variable c no es un número");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("La el valor introducido en la variable b no es un número");
+                }
+            }
+            else
+            {
+                Console.WriteLine("La el valor introducido en la variable a no es un número");
+            }
+            Console.WriteLine("Pulse una tecla para continuar...");
+            Console.ReadKey();
         }
     }
     class FuncionesString

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ModuloPRO\\source\\repos\\ProyectoEntornos\\ProyectoEntornos\\ProyectoEntornos.csproj": {}
+    "C:\\Users\\kelvin\\source\\repos\\act_programacion_repo\\ProyectoEntornos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ModuloPRO\\source\\repos\\ProyectoEntornos\\ProyectoEntornos\\ProyectoEntornos.csproj": {
+    "C:\\Users\\kelvin\\source\\repos\\act_programacion_repo\\ProyectoEntornos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ModuloPRO\\source\\repos\\ProyectoEntornos\\ProyectoEntornos\\ProyectoEntornos.csproj",
+        "projectUniqueName": "C:\\Users\\kelvin\\source\\repos\\act_programacion_repo\\ProyectoEntornos.csproj",
         "projectName": "ProyectoEntornos",
-        "projectPath": "C:\\Users\\ModuloPRO\\source\\repos\\ProyectoEntornos\\ProyectoEntornos\\ProyectoEntornos.csproj",
-        "packagesPath": "C:\\Users\\ModuloPRO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ModuloPRO\\source\\repos\\ProyectoEntornos\\ProyectoEntornos\\obj\\",
+        "projectPath": "C:\\Users\\kelvin\\source\\repos\\act_programacion_repo\\ProyectoEntornos.csproj",
+        "packagesPath": "C:\\Users\\kelvin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kelvin\\source\\repos\\act_programacion_repo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ModuloPRO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kelvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
