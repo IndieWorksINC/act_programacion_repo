@@ -23,7 +23,7 @@ namespace ProyectoEntornos
     {
         public static void EsPrimo(int num)
         {
-            Console.WriteLine("Esto es un test del github")
+            Console.WriteLine("Esto es un test del github");
             //Calcular si el número es primo
         }
         public static void CalcFactorial(int num)
@@ -49,22 +49,58 @@ namespace ProyectoEntornos
     }
     class FuncionesArray
     {
-        public static void MaxValor(decimal[] lista)
+        public static decimal MaxValor(decimal[] lista)
         {
-            //Calcular máximo
-            Console.WriteLine("Maldito idiota");
+            decimal max = lista[0];
+            for (int i = 1; i < lista.Length; i++)
+            {
+                if (lista[i] > max)
+                {
+                    max = lista[i];
+                }
+            }
+            Console.WriteLine("El número máximo es: " + max);
+            return max;
         }
-        public static void MinValor(decimal[] lista)
+        public static decimal MinValor(decimal[] lista)
         {
-            //Calcular mínimo
+            decimal min = lista[0];
+            for (int i = 1; i < lista.Length; i++)
+            {
+                if (lista[i] < min)
+                {
+                    min = lista[i];
+                }
+            }
+            Console.WriteLine("El número mínimo es: " + min);
+            return min;
         }
-        public static void CalcMediana(decimal[] lista)
+        public static decimal CalcMediana(decimal[] lista)
         {
-            //Calcular la mediana
+            Array.Sort(lista);
+            decimal mediana;
+            int mid = lista.Length / 2;
+            if (lista.Length % 2 != 0)
+            {
+                mediana = lista[mid];
+            }
+            else
+            {
+                mediana = (lista[mid - 1] + lista[mid]) / 2;
+            }
+            Console.WriteLine("La mediana es: " + mediana);
+            return mediana;
         }
-        public static void CalcAvg(decimal[] lista)
+        public static decimal CalcAvg(decimal[] lista)
         {
-            //Calcular la media
+            decimal suma = 0;
+            for (int i = 0; i < lista.Length; i++)
+            {
+                suma += lista[i];
+            }
+            decimal media = suma / lista.Length;
+            Console.WriteLine("La media es: " + media);
+            return media;
         }
         public static void MenorMayor(decimal[] lista)
         {
