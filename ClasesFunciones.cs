@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics.Metrics;
 
+
 namespace ProyectoEntornos
 {
     
@@ -26,7 +27,6 @@ namespace ProyectoEntornos
     {
         public static void EsPrimo(int num)
         {
-            Console.WriteLine("Esto es un test del github");
             //Calcular si el número es primo
         }
         public static void CalcFactorial(int num)
@@ -195,18 +195,74 @@ namespace ProyectoEntornos
         public static void Palindromo(string cadena)
         {
             //Devolver si el string es un palíndromo
+            string prueba="";
+            cadena = cadena.ToUpper();
+            int cuenta = cadena.Length;
+            for (int cont = cuenta - 1; cont >= 0; cont--)
+            {
+                prueba = prueba + cadena[cont];
+            }
+            if (prueba == cadena)
+            {
+                Console.WriteLine("Es palindrome");
+            }
+            else
+            {
+                Console.WriteLine("No es palindrome");
+            }
         }
         public static void MayusMinus (string cadena)
         {
             //Escribir el nombre todo en mayúsculas y todo en minúsculas
+            Console.WriteLine(cadena.ToUpper());
+            Console.WriteLine(cadena.ToLower());
         }
         public static void NumLetras(string cadena)
         {
             //Devolver el número de ocurrencias de una letra
+            bool puede = false;
+            char letra;
+            do
+            {
+                Console.WriteLine("Introduzca la letra a contar en la cadena: ");
+                if (Char.TryParse(Console.ReadLine(), out letra))
+                    puede = true;
+                else
+                    Console.WriteLine("Porfavor, vuelva a intentarlo.");
+                
+            } while (!puede);
+
+            int cuenta =0;
+            char[] prueba = cadena.ToCharArray();
+
+            for (int cont = 0; cont < cadena.Length-1; cont++)
+            {
+                if (prueba[cont] == letra)
+                    cuenta++;
+            }
+            Console.WriteLine("La letra " + letra + " aparece: {0}vez/veces.", cuenta);
+          
         }
         public static void RepetirCadena(string cadena)
         {
             //Dados dos Strings distintos, hacer que se repitan las veces que informe el usuario.(Alejandro, crack, 2->Alejandro crack Alejandro crack)
+            Console.WriteLine("Introduzca una segunda cadena: ");
+            string cadena2= Console.ReadLine();
+            int num=0;
+            do
+            {
+                Console.WriteLine("Introduzca el número de veces a repetir: ");
+                if (Int32.TryParse(Console.ReadLine(), out num))
+                {
+                    for (int cont = 0; cont <=num; cont++)
+                    {
+                        Console.WriteLine(cadena+cadena2+"/");
+                    }
+                }
+                else
+                    Console.WriteLine("Porfavor, vuelta a intentarlo. ");
+            }while(num != 0);
+        
         }
         public static void RepetirLetra(string cadena)
         {
