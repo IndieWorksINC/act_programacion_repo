@@ -8,7 +8,10 @@ namespace ProyectoEntornos
     
     class FuncionesUtiles
     {
+        //public static decimal EsDecimal(string valor)
+        //{
 
+        //}
     }
     
     //
@@ -49,22 +52,58 @@ namespace ProyectoEntornos
     }
     class FuncionesArray
     {
-        public static void MaxValor(decimal[] lista)
+        public static decimal MaxValor(decimal[] lista)
         {
-            //Calcular máximo
-            Console.WriteLine("Maldito idiota");
+            decimal max = lista[0];
+            for (int i = 1; i < lista.Length; i++)
+            {
+                if (lista[i] > max)
+                {
+                    max = lista[i];
+                }
+            }
+            Console.WriteLine("El número máximo es: " + max);
+            return max;
         }
-        public static void MinValor(decimal[] lista)
+        public static decimal MinValor(decimal[] lista)
         {
-            //Calcular mínimo
+            decimal min = lista[0];
+            for (int i = 1; i < lista.Length; i++)
+            {
+                if (lista[i] < min)
+                {
+                    min = lista[i];
+                }
+            }
+            Console.WriteLine("El número mínimo es: " + min);
+            return min;
         }
-        public static void CalcMediana(decimal[] lista)
+        public static decimal CalcMediana(decimal[] lista)
         {
-            //Calcular la mediana
+            Array.Sort(lista);
+            decimal mediana;
+            int mid = lista.Length / 2;
+            if (lista.Length % 2 != 0)
+            {
+                mediana = lista[mid];
+            }
+            else
+            {
+                mediana = (lista[mid - 1] + lista[mid]) / 2;
+            }
+            Console.WriteLine("La mediana es: " + mediana);
+            return mediana;
         }
-        public static void CalcAvg(decimal[] lista)
+        public static decimal CalcAvg(decimal[] lista)
         {
-            //Calcular la media
+            decimal suma = 0;
+            for (int i = 0; i < lista.Length; i++)
+            {
+                suma += lista[i];
+            }
+            decimal media = suma / lista.Length;
+            Console.WriteLine("La media es: " + media);
+            return media;
         }
         public static void MenorMayor(decimal[] lista)
         {
@@ -92,6 +131,63 @@ namespace ProyectoEntornos
         public static void EcuacionSegundGrado(decimal num)
         {
             //Dados tres coeficientes ejecutar la ecuación de segundo grado
+            while (true)
+            {
+
+                double a = 0;
+                double b = 0;
+                double c = 0;
+
+                double x1 = 0;
+                double x2 = 0;
+
+
+                Console.WriteLine("Esta función requiere de que introduzca 3 nuevos valores para ejecutar la ecuación: ");
+                Console.WriteLine("Introduzca el valor A de la ecuación: ");
+
+                while(!Double.TryParse(Console.ReadLine(), out a))
+                {
+                    Console.WriteLine("Valor introducido no decimal. Vuelva a intentarlo: ");
+                }
+                Console.WriteLine("Introduzca el valor B de la ecuación: ");
+
+                while (!Double.TryParse(Console.ReadLine(), out b))
+                {
+                    Console.WriteLine("Valor introducido no decimal. Vuelva a intentarlo: ");
+                }
+                Console.WriteLine("Introduzca el valor C de la ecuación: ");
+
+                while (!Double.TryParse(Console.ReadLine(), out c))
+                {
+                    Console.WriteLine("Valor introducido no decimal. Vuelva a intentarlo: ");
+                }
+
+                Console.WriteLine($"La ecuación introducida es {a}x^2 + {b}x + {c}");
+
+                x1 = (-b + Math.Sqrt(Math.Pow(b, 2) - (4 * a * c))) / (2 * a);
+                x2 = (-b - Math.Sqrt(Math.Pow(b, 2) - (4 * a * c))) / (2 * a);
+                if(Double.IsNaN(x1) || Double.IsNaN(x2))
+                {
+                    Console.WriteLine("La ecuación tiene un valor imaginario que no existe dentro del conjunto de los números reales.");
+                }
+                if(x1 == x2)
+                {
+                    Console.WriteLine($"La ecuación solo tiene una solución real: x={x1}");
+                }
+                else
+                {
+                    Console.WriteLine($"El valor de x es {x1} y {x2}");
+
+                }
+            }
+                
+                
+            //if(a != 0 && b != 0 && c != 0)
+            //{
+
+            //}
+
+
         }
     }
     class FuncionesString

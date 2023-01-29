@@ -126,6 +126,7 @@ namespace ProyectoEntornos
             Console.WriteLine("Introduzca 2 para eliminar los decimales");
             Console.WriteLine("Introduzca 3 introducir valores para una ecuación de segundo grado");//te doy un parametro, comprueba los otros
 
+            token = false;
 
             do
             {
