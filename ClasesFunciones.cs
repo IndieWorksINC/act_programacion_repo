@@ -235,7 +235,7 @@ namespace ProyectoEntornos
             int cuenta =0;
             char[] prueba = cadena.ToCharArray();
 
-            for (int cont = 0; cont < cadena.Length-1; cont++)
+            for (int cont = 0; cont <= cadena.Length-1; cont++)
             {
                 if (prueba[cont] == letra)
                     cuenta++;
@@ -248,25 +248,40 @@ namespace ProyectoEntornos
             //Dados dos Strings distintos, hacer que se repitan las veces que informe el usuario.(Alejandro, crack, 2->Alejandro crack Alejandro crack)
             Console.WriteLine("Introduzca una segunda cadena: ");
             string cadena2= Console.ReadLine();
-            int num=0;
+            int num=-1;
             do
             {
                 Console.WriteLine("Introduzca el número de veces a repetir: ");
                 if (Int32.TryParse(Console.ReadLine(), out num))
                 {
-                    for (int cont = 0; cont <=num; cont++)
+                    if (num != 0)
                     {
-                        Console.WriteLine(cadena+cadena2+"/");
+                        for (int cont = 0; cont <= num - 1; cont++)
+                        {
+                            Console.Write(cadena + cadena2+"/");
+                        }
                     }
+                    else
+                        Console.WriteLine("Que tenga buen día.");
                 }
                 else
                     Console.WriteLine("Porfavor, vuelta a intentarlo. ");
-            }while(num != 0);
+            }while(num != -1);
         
         }
         public static void RepetirLetra(string cadena)
-        {
-            //Dado un String, repetir cada ocurrencia de su letra. Por ejemplo: NBA se convierte en NNBBAA, Madrid en MMaaddrriidd.
+        {//Dado un String, repetir cada ocurrencia de su letra. Por ejemplo: NBA se convierte en NNBBAA, Madrid en MMaaddrriidd.
+
+            string cadena2 = cadena; // 3
+            string[]resultado=new string[((cadena.Length)*2)]; // 6
+            for (int cont = 0; cont <= cadena.Length-1; cont++)
+            {
+                resultado[cont] = cadena[cont]+""+cadena2[cont]; // 2 + 2 + 2
+            }
+            for (int cont = 0; cont < resultado.Length-1; cont++)
+            {
+                Console.Write(resultado[cont]);
+            }
         }
         public static void BorrarCadena(string cadena)
         {
