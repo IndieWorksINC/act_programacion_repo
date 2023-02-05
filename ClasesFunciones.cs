@@ -107,15 +107,31 @@ namespace ProyectoEntornos
         }
         public static void MenorMayor(decimal[] lista)
         {
-            //Ordenar un Array de menor a mayor
+            Array.Sort(lista);
+            Console.WriteLine("Números ordenados de menor a mayor:");
+            foreach (int number in lista)
+            {
+                Console.Write($" {number}");
+            }
         }
-        public static void Desviacion(decimal[] lista)
+        public static decimal Desviacion(decimal[] lista)
         {
-            //Calcular la desviación típica de un array
-        }
-        public static void Binarizar(decimal[] lista)
-        {
-            //Binarizar un array en base a un número n. Esta función devolverá un nuevo array, cuyos elementos valdrán 0 o 1.Si el componente i del array original es menor que n, el componente i del array resultado será 0, y 1 en el caso contrario.
+            decimal media = 0;
+            decimal suma = 0;
+            for (int i = 0; i < lista.Length; i++)
+            {
+                media += lista[i];
+            }
+            media = media / lista.Length;
+
+            for (int i = 0; i < lista.Length; i++)
+            {
+                suma += (decimal)Math.Pow((double)(lista[i] - media), 2);
+            }
+
+            Console.WriteLine("Desviación típica: " + ((decimal)Math.Sqrt((double)(suma / (lista.Length - 1)))).ToString("F2"));
+            return (decimal)Math.Sqrt((double)(suma / (lista.Length - 1)));
+
         }
     }
     class FuncionesDecimal
