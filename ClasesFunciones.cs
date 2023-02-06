@@ -313,6 +313,7 @@ namespace ProyectoEntornos
 
 
         }
+    }
     class FuncionesString
         {
 
@@ -413,4 +414,4 @@ namespace ProyectoEntornos
             }
         }
     } 
-
+}
