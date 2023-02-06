@@ -225,7 +225,35 @@ namespace ProyectoEntornos
 
 
         }
-        
+
+        public static decimal[] Binarizar(decimal[] lista)
+        {
+            Console.Write("Ingresa el número a comparar: ");
+            decimal n = decimal.Parse(Console.ReadLine());
+            decimal[] binarizado = new decimal[lista.Length];
+            Console.Write("Array original: ");
+            for (int i = 0; i < lista.Length; i++)
+            {
+                Console.Write(lista[i] + " ");
+                if (lista[i] < n)
+                {
+                    binarizado[i] = 0;
+                }
+                else
+                {
+                    binarizado[i] = 1;
+                }
+            }
+            Console.WriteLine();
+            Console.Write("Array resultante: ");
+            for (int i = 0; i < binarizado.Length; i++)
+            {
+                Console.Write(binarizado[i] + " ");
+            }
+            Console.WriteLine();
+            return binarizado;
+        }
+
     }
     class FuncionesDecimal
     {
@@ -402,5 +430,6 @@ namespace ProyectoEntornos
             //Dado dos Strings, borrar del primero las apariencias del segundo.Por ejemplo, dado Real Zaragoza es de la realeza y Real¸ la función devolverá Zaragoza es de la eza.
         }
     }
-} 
+}
+
 
