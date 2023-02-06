@@ -8,20 +8,7 @@ namespace ProyectoEntornos
 
     class FuncionesUtiles
     {
-        //public static decimal EsDecimal(string valor)
-        //{
-
-        //}
     }
-
-    //
-    //
-    //
-    // Como Modifiques algo date por muerto<3
-    //
-    //
-    //
-
 
     class FuncionesEntero
     {
@@ -258,6 +245,7 @@ namespace ProyectoEntornos
             Console.WriteLine("El número truncado es: {0} ", num);
             Console.WriteLine("Pulse una tecla para continuar...");
             Console.ReadKey();
+        }
 
 
         public static void EcuacionSegundGrado(decimal num)
@@ -315,103 +303,104 @@ namespace ProyectoEntornos
         }
     }
     class FuncionesString
+    {
+
+        public static void Palindromo(string cadena)
         {
-
-            public static void Palindromo(string cadena)
+            //Devolver si el string es un palíndromo
+            string prueba = "";
+            cadena = cadena.ToUpper();
+            int cuenta = cadena.Length;
+            for (int cont = cuenta - 1; cont >= 0; cont--)
             {
-                //Devolver si el string es un palíndromo
-                string prueba = "";
-                cadena = cadena.ToUpper();
-                int cuenta = cadena.Length;
-                for (int cont = cuenta - 1; cont >= 0; cont--)
-                {
-                    prueba = prueba + cadena[cont];
-                }
-                if (prueba == cadena)
-                {
-                    Console.WriteLine("Es palindrome");
-                }
-                else
-                {
-                    Console.WriteLine("No es palindrome");
-                }
+                prueba = prueba + cadena[cont];
             }
-            public static void MayusMinus(string cadena)
+            if (prueba == cadena)
             {
-                //Escribir el nombre todo en mayúsculas y todo en minúsculas
-                Console.WriteLine(cadena.ToUpper());
-                Console.WriteLine(cadena.ToLower());
+                Console.WriteLine("Es palindrome");
             }
-            public static void NumLetras(string cadena)
+            else
             {
-                //Devolver el número de ocurrencias de una letra
-                bool puede = false;
-                char letra;
-                do
-                {
-                    Console.WriteLine("Introduzca la letra a contar en la cadena: ");
-                    if (Char.TryParse(Console.ReadLine(), out letra))
-                        puede = true;
-                    else
-                        Console.WriteLine("Porfavor, vuelva a intentarlo.");
-
-                } while (!puede);
-
-                int cuenta = 0;
-                char[] prueba = cadena.ToCharArray();
-
-                for (int cont = 0; cont <= cadena.Length - 1; cont++)
-                {
-                    if (prueba[cont] == letra)
-                        cuenta++;
-                }
-                Console.WriteLine("La letra " + letra + " aparece: {0}vez/veces.", cuenta);
-
-            }
-            public static void RepetirCadena(string cadena)
-            {
-                //Dados dos Strings distintos, hacer que se repitan las veces que informe el usuario.(Alejandro, crack, 2->Alejandro crack Alejandro crack)
-                Console.WriteLine("Introduzca una segunda cadena: ");
-                string cadena2 = Console.ReadLine();
-                int num = -1;
-                do
-                {
-                    Console.WriteLine("Introduzca el número de veces a repetir: ");
-                    if (Int32.TryParse(Console.ReadLine(), out num))
-                    {
-                        if (num != 0)
-                        {
-                            for (int cont = 0; cont <= num - 1; cont++)
-                            {
-                                Console.Write(cadena + cadena2 + "/");
-                            }
-                        }
-                        else
-                            Console.WriteLine("Que tenga buen día.");
-                    }
-                    else
-                        Console.WriteLine("Porfavor, vuelta a intentarlo. ");
-                } while (num != -1);
-
-            }
-            public static void RepetirLetra(string cadena)
-            {//Dado un String, repetir cada ocurrencia de su letra. Por ejemplo: NBA se convierte en NNBBAA, Madrid en MMaaddrriidd.
-
-                string cadena2 = cadena; // 3
-                string[] resultado = new string[((cadena.Length) * 2)]; // 6
-                for (int cont = 0; cont <= cadena.Length - 1; cont++)
-                {
-                    resultado[cont] = cadena[cont] + "" + cadena2[cont]; // 2 + 2 + 2
-                }
-                for (int cont = 0; cont < resultado.Length - 1; cont++)
-                {
-                    Console.Write(resultado[cont]);
-                }
-            }
-            public static void BorrarCadena(string cadena)
-            {
-                //Dado dos Strings, borrar del primero las apariencias del segundo.Por ejemplo, dado Real Zaragoza es de la realeza y Real¸ la función devolverá Zaragoza es de la eza.
+                Console.WriteLine("No es palindrome");
             }
         }
-    } 
-}
+        public static void MayusMinus(string cadena)
+        {
+            //Escribir el nombre todo en mayúsculas y todo en minúsculas
+            Console.WriteLine(cadena.ToUpper());
+            Console.WriteLine(cadena.ToLower());
+        }
+        public static void NumLetras(string cadena)
+        {
+            //Devolver el número de ocurrencias de una letra
+            bool puede = false;
+            char letra;
+            do
+            {
+                Console.WriteLine("Introduzca la letra a contar en la cadena: ");
+                if (Char.TryParse(Console.ReadLine(), out letra))
+                    puede = true;
+                else
+                    Console.WriteLine("Porfavor, vuelva a intentarlo.");
+
+            } while (!puede);
+
+            int cuenta = 0;
+            char[] prueba = cadena.ToCharArray();
+
+            for (int cont = 0; cont <= cadena.Length - 1; cont++)
+            {
+                if (prueba[cont] == letra)
+                    cuenta++;
+            }
+            Console.WriteLine("La letra " + letra + " aparece: {0}vez/veces.", cuenta);
+
+        }
+        public static void RepetirCadena(string cadena)
+        {
+            //Dados dos Strings distintos, hacer que se repitan las veces que informe el usuario.(Alejandro, crack, 2->Alejandro crack Alejandro crack)
+            Console.WriteLine("Introduzca una segunda cadena: ");
+            string cadena2 = Console.ReadLine();
+            int num = -1;
+            do
+            {
+                Console.WriteLine("Introduzca el número de veces a repetir: ");
+                if (Int32.TryParse(Console.ReadLine(), out num))
+                {
+                    if (num != 0)
+                    {
+                        for (int cont = 0; cont <= num - 1; cont++)
+                        {
+                            Console.Write(cadena + cadena2 + "/");
+                        }
+                    }
+                    else
+                        Console.WriteLine("Que tenga buen día.");
+                }
+                else
+                    Console.WriteLine("Porfavor, vuelta a intentarlo. ");
+            } while (num != -1);
+
+        }
+        public static void RepetirLetra(string cadena)
+        {
+            //Dado un String, repetir cada ocurrencia de su letra. Por ejemplo: NBA se convierte en NNBBAA, Madrid en MMaaddrriidd.
+
+            string cadena2 = cadena; // 3
+            string[] resultado = new string[((cadena.Length) * 2)]; // 6
+            for (int cont = 0; cont <= cadena.Length - 1; cont++)
+            {
+                resultado[cont] = cadena[cont] + "" + cadena2[cont]; // 2 + 2 + 2
+            }
+            for (int cont = 0; cont < resultado.Length - 1; cont++)
+            {
+                Console.Write(resultado[cont]);
+            }
+        }
+        public static void BorrarCadena(string cadena)
+        {
+            //Dado dos Strings, borrar del primero las apariencias del segundo.Por ejemplo, dado Real Zaragoza es de la realeza y Real¸ la función devolverá Zaragoza es de la eza.
+        }
+    }
+} 
+
