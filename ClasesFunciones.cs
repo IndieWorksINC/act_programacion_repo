@@ -225,6 +225,7 @@ namespace ProyectoEntornos
 
 
         }
+
         public static decimal[] Binarizar(decimal[] lista)
         {
             Console.Write("Ingresa el número a comparar: ");
@@ -252,6 +253,7 @@ namespace ProyectoEntornos
             Console.WriteLine();
             return binarizado;
         }
+
     }
     class FuncionesDecimal
     {
@@ -429,4 +431,5 @@ namespace ProyectoEntornos
         }
     }
 }
+
 
