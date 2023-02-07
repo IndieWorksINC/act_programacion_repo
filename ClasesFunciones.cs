@@ -258,14 +258,14 @@ namespace ProyectoEntornos
     class FuncionesDecimal
     {
          public static void Redondear(decimal num)
-        {
+         {
             //Redondear el número al alza
             num = Math.Round(num, MidpointRounding.AwayFromZero);
             Console.WriteLine("El número redondeado al alza es: {0} ", num);
 
             Console.WriteLine("Pulse una tecla para continuar...");
             Console.ReadKey();
-        }
+         }
         public static void Truncar(decimal num)
         {
             //Eliminar los decimales del número
@@ -407,7 +407,7 @@ namespace ProyectoEntornos
                 }
                 else
                     Console.WriteLine("Porfavor, vuelta a intentarlo. ");
-            } while (num != -1);
+            } while (num != 0);
 
         }
         public static void RepetirLetra(string cadena)
