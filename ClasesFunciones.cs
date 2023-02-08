@@ -427,7 +427,16 @@ namespace ProyectoEntornos
         }
         public static void BorrarCadena(string cadena)
         {
-            //Dado dos Strings, borrar del primero las apariencias del segundo.Por ejemplo, dado Real Zaragoza es de la realeza y Real¸ la función devolverá Zaragoza es de la eza.
+            //Dado dos Strings, borrar del primero las apariencias del segundo. Por ejemplo, dado Real Zaragoza es de la realeza y Real¸ la función devolverá Zaragoza es de la eza.
+            Console.WriteLine("Introduzca una segunda cadena: ");
+            string cadena2 = Console.ReadLine();
+            string result = cadena;
+            cadena = cadena.ToLower();
+            cadena2 = cadena2.ToLower();
+            result = cadena.Replace(cadena2, "");
+            result = result.Trim();
+            Console.WriteLine(result);
+
         }
     }
 }
