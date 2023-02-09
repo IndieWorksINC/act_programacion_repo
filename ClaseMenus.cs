@@ -214,7 +214,7 @@ namespace ProyectoEntornos
             Console.WriteLine("Introduzca 2 para Calcular el mínimo del array");
             Console.WriteLine("Introduzca 3 para Calcular la mediana del array");
             Console.WriteLine("Introduzca 4 para Calcular la media del array");
-            Console.WriteLine("Introduzca 5 para Ordernar del array de menor a mayor");
+            Console.WriteLine("Introduzca 5 para Ordenar del array de menor a mayor");
             Console.WriteLine("Introduzca 6 para Calcular la desviación típica del array");
             Console.WriteLine("Introduzca 7 para Binarizar el array en base a un número N");
 
